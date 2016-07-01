@@ -813,7 +813,7 @@ public abstract class AbstractBaseJnlpMojo
         }
     }
 
-    private int makeUnprocessedFilesFinal( File directory )
+    protected int makeUnprocessedFilesFinal(File directory)
         throws MojoExecutionException
     {
         File[] jarFiles = directory.listFiles( unprocessedJarFileFilter );

@@ -9,13 +9,16 @@
   </parent>
 
   <artifactId>webstart</artifactId>
-  <version>1.0-beta-8-SNAPSHOT</version>
+  <version>1.2</version>
+
   <packaging>pom</packaging>
 
   <name>MWEBSTART :: Project</name>
   <description>Webstart Maven Plugin and related modules</description>
+
   <url>http://mojohaus.org/webstart</url>
   <inceptionYear>2005</inceptionYear>
+
   <licenses>
     <license>
       <name>Apache License 2</name>
@@ -122,6 +125,14 @@
       </releases>
     </repository>
   </repositories>
+
+  <distributionManagement>
+    <repository>
+      <id>com.pressassociation.nexus.releases</id>
+      <name>Maven Central Compatible PA Releases Repository</name>
+      <url>http://nexus.howden.press.net/nexus/content/repositories/releases</url>
+    </repository>
+  </distributionManagement>
 
   <dependencyManagement>
     <dependencies>
@@ -324,6 +335,11 @@
   <build>
     <pluginManagement>
       <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.2</version>
+        </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-plugin-plugin</artifactId>
